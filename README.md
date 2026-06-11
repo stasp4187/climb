@@ -1,62 +1,139 @@
+Climb
 
-## 📄 README.md
+Climb is a full-stack web application designed to help users discover, explore, and save hiking trails. Users can browse routes, filter them by different criteria, view detailed information, leave reviews, and manage their favorite trails through a personal account.
 
-```md
-# Project Name
+Features
 
-This is a simple web project built for learning and practice purposes.  
-The project demonstrates basic structure of a website and working with front-end technologies.
+* Browse a collection of hiking trails
+* Search trails by keywords
+* Filter trails by difficulty level
+* Filter trails by distance
+* View detailed trail information
+* Explore trail photos
+* Leave ratings and reviews
+* User registration and login
+* Save and manage favorite trails
+* Change account password
+* Responsive and modern user interface
 
-## 🚀 Features
+Tech Stack
 
-- Responsive layout
-- Clean and simple UI
-- Basic structure for scalable development
-- Easy to modify and extend
+Frontend
 
-## 🛠️ Technologies Used
+* Next.js 16
+* React 19
+* TypeScript
+* Tailwind CSS
+* Shadcn/UI
+* Axios
+* MapLibre GL
+* Sonner
 
-- HTML
-- CSS
-- JavaScript (if used)
+Backend
 
-## 📁 Project Structure
+* NestJS 11
+* TypeScript
+* Express
+* Class Validator
+* Class Transformer
+* UUID
+
+DevOps
+
+* Docker
+* Docker Compose
+
+Project Structure
 
 ```
+climb/
+├── frontend/     # Next.js frontend
+├── backend/      # NestJS API
+└── docker-compose.yml
+```
 
-/project-root
-│
-├── index.html
-├── style.css
-├── script.js
-└── assets/
+Getting Started
 
-````
+Requirements
 
-## ▶️ How to Run
+* Node.js 20+
+* npm
+* Docker (optional)
 
-1. Download or clone the repository:
+Installation
+
+Clone the repository:
+
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-````
+git clone https://github.com/stasp4187/climb.git
+cd climb
+```
 
-2. Open `index.html` in your browser.
+Frontend Setup
 
-No additional setup required.
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## 🌐 Deployment
+Frontend will be available at:
 
-You can deploy this project using:
+```
+http://localhost:3000
+```
 
-* GitHub Pages
-* Netlify
-* Vercel
+Backend Setup
 
-## 📌 Purpose
+```bash
+cd backend
+npm install
+npm run start:dev
+```
 
-This project was created for practice and improving frontend development skills.
+Backend API will be available at:
 
-## 👤 Author
+```
+http://localhost:3001
+```
 
-* GitHub: your-username
+Docker
 
+Run the entire application using Docker Compose:
+
+```bash
+docker-compose up --build
+```
+
+API Endpoints
+
+Authentication
+
+* POST `/api/auth/login`
+* POST `/api/auth/register`
+* POST `/api/auth/check-email`
+* POST `/api/auth/toggle-save`
+* POST `/api/auth/change-password`
+
+Trails
+
+* GET `/api/trails`
+* GET `/api/trails/:idOrSlug`
+* GET `/api/trails/:idOrSlug/photos`
+* POST `/api/trails/:idOrSlug/reviews`
+
+Future Improvements
+
+* JWT authentication
+* Database integration
+* User profile editing
+* Trail creation by users
+* Interactive maps with route tracking
+* Image uploads
+* Admin panel
+
+## Author
+
+Created by Stas Popovych.
+
+GitHub: https://github.com/stasp4187
